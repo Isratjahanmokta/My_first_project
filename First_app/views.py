@@ -76,5 +76,11 @@ def edit_album(request, album_id):
     return render(request, 'First_app/edit_album.html', context = diction)
 
 def delete_album(request,album_id):
-    diction = {}
+    album = Album.objects.get(pk=album_id).delete()
+    diction = {'delete_success':'Album Deleted successfully!'}
     return render(request, 'First_app/delete_album.html', context=diction)
+
+def delete_musician(request,artist_id):
+    musician = Musician.objects.get(pk=artist_id).delete()
+    diction = {'delete_success':'Musician Deleted successfully!'}
+    return render(request, 'First_app/delete_musician.html', context=diction)
