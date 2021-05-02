@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "First_app/base.html" %}
+
+{% block body_block %}
+
+<h3>ALbum Form:</h3>
+<form method="POST">
+  {{ album_form.as_p }}
+  {% csrf_token %}
+  <input type='submit' name="submit" value="Add" class='btn btn-primary btn-sm'>
+</form>
+
+{%  endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+  </head>
+  <body>
+    <h3>{{ heading_1}}</h3>
+    <a href="{% url 'First_app:index' %}">Back</a>
+    <form action="" method="post">
+      {{ test_form.as_p }}
+      {% csrf_token %}
+      <input type="submit" name="" Submit="">
+    </form>
+    <hr>
+  </body>
+</html> -->
